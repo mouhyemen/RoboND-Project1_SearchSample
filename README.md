@@ -10,7 +10,7 @@
 * Atleast 60% fidelity
 * Locate at least one rock sample
 
-### 1.2 Outcomes:
+### 1.2 Outcomes (1024x768 and 'Good' graphics):
 * Mapped 98% of the map
 * With 70% fidelity
 * Located and picked up all 6 samples
