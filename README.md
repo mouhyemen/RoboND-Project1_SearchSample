@@ -1,5 +1,5 @@
 
-# Project 1: Search and Sample Return by Mouhyemen Khan
+# Project 1: Search and Sample Return
 ---
 
 
