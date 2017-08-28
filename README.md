@@ -19,10 +19,10 @@
 
 ### 2.1 Navigable Terrain
 The image coming in from the Rover's perspective is first warped using OpenCV's perspective transform function. Then a color thresholding filter is applied on the warped image. The result is as follows.
-![threshed]: (https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/threshed.png)
+![threshed]: (/images/threshed.png)
 
 To improve the fidelity, the thresholded figure shown above is not taken as is. Instead, a mask is applied on it to extract only a certain portion of the thresholded-warped figure. The result is shown below.
-![box_nav]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/box_nav.png
+![box_nav]: (/images/box_nav.png)
 
 
 ```python
@@ -68,7 +68,7 @@ def box_threshed(threshed):
 
 ### 2.2 Obstacle outlining
 The method employed here is to simply outline the navigable terrain detected using contour detection. First, a series of erosions and dilations are performed to remove any edges and blobs. Then contours are detected and outlined.
-![outline_obstacle]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/outline_obstacle.png
+![outline_obstacle]: /images/outline_obstacle.png
 
 
 ```python
@@ -88,7 +88,7 @@ def create_obs_map(nav_map):
 
 ### 2.3 Rocks detection
 A simple color filtering is applied on RGB color space to detect the rock samples. The result is shown below.
-![detect_rock]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/detect_rock.png
+![detect_rock]: (/images/detect_rock.png)
 
 
 ```python
@@ -136,7 +136,7 @@ threshed = box_threshed(threshed)
 obs_map  = create_obs_map(threshed)
 ```
 
-![step1_image]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/step1_image.png
+![step1_image]: (/images/step1_image.png)
 
 ### 3.2 Updating rover vision image and coordinate transformations
 
@@ -405,7 +405,7 @@ The vision_image and worldmap are shown on the left and right of the screen.
 ### 5.1 Vision image
 If a rock sample is detected, it is shown in green color. The navigable terrain is colored in blue whereas the obstacle outlining this navigable terrain is marked in red. A sample image is shown below
 
-![vision_rock]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/vision_rock.png
+![vision_rock]: (/images/vision_rock.png)
 
 ### 5.2 Worldmap image
 The worldmap contains some statistics on the Rover such as time elapsed, percentage of the terrain mapped, and fidelity. Apart from stats, the navigable terrain, obstacles, and rocks are highlighted in the map.
@@ -446,7 +446,7 @@ grid_x, grid_y = getGrid(Rover.pos[0], Rover.pos[1], size)
 
 A sample of the worldmap is shown below.
 
-![worldmap]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/worldmap.png
+![worldmap]: (/images/worldmap.png)
 
 ## 6. Improvements
 
@@ -459,5 +459,4 @@ Currently, the Rover is only able to collect all 6 samples but I did not impleme
 ### 6.3 Avoid re-visiting terrains
 In order to tackle this, I had created grids in the worldmap for the Rover to localize itself into grid cells. As the Rover is entering a new grid, each grid gets updated with a weight. However, I have not implemented any algorithm after this for the Rover to unnecessarily visit certain terrains. An example of the grid generated is shown below. It is a 20x20 matrix.
 
-[grid_map]: https://raw.githubusercontent.com/mouhyemen/project1-search_samples/blob/master/images/grid_map.png
-![alt text][grid_map]
+![grid_map]: (/images/grid_map.png)
