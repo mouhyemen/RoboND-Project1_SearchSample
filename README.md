@@ -22,6 +22,7 @@ The image coming in from the Rover's perspective is first warped using OpenCV's 
 ![threshed]: (/images/threshed.png)
 
 To improve the fidelity, the thresholded figure shown above is not taken as is. Instead, a mask is applied on it to extract only a certain portion of the thresholded-warped figure. The result is shown below.
+
 ![box_nav]: (/images/box_nav.png)
 
 
